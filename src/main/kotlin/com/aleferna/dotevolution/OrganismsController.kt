@@ -141,41 +141,41 @@ class OrganismsController : Controller(){
 		organism2.food -=  organism2.parentalInvestment
 		// Transmitindo as características, mutando elas e assegurando que os valores não trespassem os limites
 		val trajectory = Parameters.trajectory.normalMutate(
-			Evolution.incompleteDominance(
+			Evolution.poligenicInheritance(
 				organism.trajectory,
 				organism2.trajectory
 			)
 		)
 		val speed = Parameters.speed.normalMutate(
-			Evolution.incompleteDominance(
+			Evolution.poligenicInheritance(
 				organism.speed,
 				organism2.speed
 			)
 		)
 		val radius =  Parameters.radius.normalMutate(
-			Evolution.incompleteDominance(
+			Evolution.poligenicInheritance(
 				organism.size,
 				organism2.size)
 		)
 		val parentalCare =  Parameters.parentalInvestment.normalMutate(
-			Evolution.incompleteDominance(
+			Evolution.poligenicInheritance(
 				organism.parentalInvestment,
 				organism2.parentalInvestment
 			)
 		)
 		// Usando uma mutRate menor para as cores não variarem em excesso
 		val red = Evolution.normalMutate(
-			Evolution.incompleteDominance(organism.color.red, organism2.color.red),
+			Evolution.poligenicInheritance(organism.color.red, organism2.color.red),
 			Parameters.mutationRate * Parameters.colorRandomizable.mutRate
 		)
 			.coerceIn(0.0, 1.0)
 		val green = Evolution.normalMutate(
-			Evolution.incompleteDominance(organism.color.green, organism2.color.green),
+			Evolution.poligenicInheritance(organism.color.green, organism2.color.green),
 			Parameters.mutationRate * Parameters.colorRandomizable.mutRate
 		)
 			.coerceIn(0.0, 1.0)
 		val blue = Evolution.normalMutate(
-			Evolution.incompleteDominance(organism.color.blue, organism2.color.blue),
+			Evolution.poligenicInheritance(organism.color.blue, organism2.color.blue),
 			Parameters.mutationRate * Parameters.colorRandomizable.mutRate
 		)
 			.coerceIn(0.0, 1.0)

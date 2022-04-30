@@ -26,9 +26,8 @@ open class EvolvableParameter(
 		else mean
 
 	// This functions performs mutations for the values based on a general mutation rate
-	// and the internal, unchangeble relative mutation rate
+	// and relative mutation rate
 	// Having a relative mutation rate helps the parameters to evolve in a similar rate
-	// I wanted this value to be unchangeble by the user
 	fun normalMutate(mean: Double) =
 		Evolution.normalMutate(mean, Parameters.mutationRate * mutRate).coerceIn(lowerLimit, upperLimit)
 }
