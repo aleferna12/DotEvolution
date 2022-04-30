@@ -27,7 +27,9 @@ The simulation algorithm assumes that the traits of the child are determined by 
 
 Lastly, the child's traits are mutated. Mutation is important since it gives the new organism a chance to be even better fit to the environment than its parents. In reality, mutations may occur at any time in an organism's life, but for simplicity the algorithm of Dot Evolution only mutates each trait once right before the dot is born.
 
-[^1]: Dot Evolution's model assumes that all alleles contribute equally to the phenotype as an approximation. 
+![Dot Evolution](https://i.imgur.com/1qOepSD.png)
+
+[^1]: Dot Evolution's model assumes that all alleles contribute equally to the phenotype as an approximation.
 
 ## Installation
 
